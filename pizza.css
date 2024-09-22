@@ -1,0 +1,385 @@
+:root {
+    --primaryColor: #0e6253;
+    --secondaryColor: #ffc107;
+    --whiteColor: #fff;
+    --blackColor: #222;
+    --softGreenColor: #d9f2ee;
+    --darkGreyColor: #a7a7a7;
+    --greyColor: #f5f5f5;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open sans', sans-serif;
+
+}
+
+body {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background-color: var(--primaryColor);
+    color: hsl(175, 23%, 89%);
+   
+}
+
+.sidebar-menus {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sidebar-menus a,
+.sidebar-logout a {
+    padding: 5% 8%;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--whiteColor);
+
+
+}
+
+.sidebar-menus a ion-icon,
+.sidebar-logout a ion-icon {
+    font-size: 20px;
+}
+
+.sidebar-menus a:hover,
+.sidebar-logout a:hover {
+    background-color: var(--secondaryColor);
+    border-radius: 50px;
+}
+
+.main {
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+    padding: 2%;
+    background-color: var(--softGreenColor);
+    margin-left: 250px;
+    background: #e2ece7;
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*  we will hide the menu toogle first,this one will only appear on mobile screen later*/
+.menu-toggle {
+    display: none;
+
+}
+
+.search {
+
+    width: 60%;
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #e3ebea;
+    border-radius: 20px;
+
+}
+
+
+.search input {
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+}
+.search-btn{
+    background-color: var(--secondaryColor);
+    color: #f5f5f5;
+    border: none;
+   border-radius:25px ;
+   width: 125px;
+
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+.cart , .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--whiteColor);
+    font-size: 20px;
+    color: var(--primaryColor);
+    text-decoration: none;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.cart-hover, .user-hover{
+    box-shadow: #222;
+
+}
+.main-highlight{
+    margin:3% 0;
+    padding:2%;
+    background-color: yellow;
+    border-radius: 8px;
+
+
+}
+.main-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.main-tittle{
+    font-size: 20px;
+}
+.main-arrow{
+    font-size: 24px;
+    
+}
+.back,.next{
+    cursor: pointer;
+
+}
+.back:hover,.next:hover{
+    color:var(--primaryColor);
+    
+}
+.highlight-wrapper{
+    width: 100%;
+    display: flex;
+    padding: 1%;
+    border-radius: 8px;
+    gap: 1.5rem;
+    overflow-x:hidden;
+  
+}
+
+.highlight-card{
+    display: flex;
+    flex-direction: row;
+    min-width: 200px;
+    width: 80%;
+    height: 100%;
+    gap: 1rem;
+    border-radius: 8px;
+    padding: 1%;
+    background-color: var(--greyColor);
+    cursor: pointer;
+   
+}
+
+.highlight-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+   object-position: center;
+}
+.highlight-desc h4{
+    color:var(--primaryColor)
+
+}
+.highlight-desc p{
+    color: #222;
+    font-size: 13px;
+}
+.highlight-card:hover{
+    background-color: wheat;
+    box-shadow: #222;
+}
+.main-menus{
+    min-height: 100%;
+    background-color: var(--greyColor);
+    padding:2%;
+    border-radius: 8px;
+   
+
+}
+.main-filter{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap:1rem;
+
+}
+.back-menus,.next-menus{
+    cursor:pointer;
+
+}
+.back-menus:hover, .next-menus:hover{
+    color: rgb(16, 86, 24);
+}
+.filter-wrapper{
+    display:flex;
+    justify-content:space-around ;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100px;
+    gap: 1rem;
+}
+.filter-card{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 80px;
+    height: 100%;
+    background-color: var(--whiteColor);
+    color: var(--blackColor);
+    border-radius: 8px;
+    border: 1px solid var(--softGreenColor);
+    font-size: 14px;
+    cursor: pointer;
+
+}
+.filter-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    font-size: 30px;
+    background-color: var(--softGreenColor);
+  color: #0e6253;
+  border-radius: 8px;
+}
+.filter-card:hover{
+    background-color:var(--primaryColor);
+    color: #d3e8e3;
+}
+.filter-card:hover .filter-icon{
+    background-color: white;
+}
+.main-detail {
+    margin:  1rem 0 1.5rem 0;
+
+}
+.detail-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    width: 100%;
+    margin-top:1rem;
+    gap: 5%;
+    border-radius: 8px;
+}
+.detail-card{
+    min-height: 280px;
+    height: 100%;
+    background-color: #e2ece7;
+border-radius: 8px;
+margin:1% 0;
+box-shadow:#222 0px 2px 8px 0px;
+cursor: pointer;
+}
+.detail-img {
+   
+    width: 100%;
+    height: 180px;
+    border-radius: 8px ;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.8);
+}
+.detail-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    padding: 3%;
+    width: 100%;
+   
+}
+.detail-sub{
+    font-size: 12px;
+    color:var(--primaryColor);
+    letter-spacing: 0.5;
+    margin: 1% 0;
+}
+.price{
+    color: var(--primaryColor);
+}
+.detail-favourites{
+    font-size: 24px;
+}
+.detail-card:hover{
+    box-shadow:#353232 0px 8px 24px 
+}
+.detail-card:hover .detail-img{
+    filter: opacity(1);
+}
+.detail-card:hover .detail-name h4 {
+    color: var(--primaryColor);
+
+}
+.detail-card:hover  .price{
+    letter-spacing:1.6;
+}
+/* mobile view*/
+@media screen and (max-width:640px){
+    .sidebar{
+        display: none;
+        width: 45%;/*adjust the width to smaller percentage */
+       }
+  
+    .main{
+        margin-left: 0;
+    }
+    .menu-toggle{
+        display: block;
+        text-decoration: none;
+        font-size:  20px;
+        background-color: var(--whiteColor);
+        color: var(--primaryColor);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 3;
+    }
+    .sidebar.active{
+        display: flex;
+        z-index: 10;
+
+    }
+    .sidebar-menus a:hover,
+.sidebar-logout a:hover {
+    background-color: var(--secondaryColor);
+    border-radius: 50px;
+}
+
+}
