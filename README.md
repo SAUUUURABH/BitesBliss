@@ -41,6 +41,6 @@ For queries or collaborations:
 
 Name: Saurabh Pant
 
-LinkedIn: Saurabh Pant
+LinkedIn: www.linkedin.com/in/saurabhh11
 
 Email: saurabhpant1310@gmail.com
